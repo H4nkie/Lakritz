@@ -15,7 +15,7 @@
             // Methode um das Glas mit Random-Süßigkeiten zu befüllen
             FuelleGlas();
 
-            // Nimm zwei Süßigkeiten aus dem Glas, solange das Glas mehr als zwei Süßigkeiten beinhaltet.
+            // Nimm zwei Süßigkeiten aus dem Glas, solange das Glas mehr als eine Süßigkeit beinhaltet.
             do
             {
                 zaehler++;
