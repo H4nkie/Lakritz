@@ -22,7 +22,9 @@
                 NimmZwei( zaehler );
             }
             /*
-             *  Sind nur noch 2 Süßigkeiten im Glas, ist es egal, was gezogen wird. Die Anzahl wird immer wieder um um eine Süßigkeit erhöht.
+             *  Frage C beantwortet: Der Vorgang ist deterministisch, weil die Anzahl der Gummibärchen im Glas abnimmt und gezogene Gummibärchen
+             *  vernascht werden und nie wieder aufgefüllt werden. Die Anzahl der Süßigkeiten reduziert sich, 
+             *  da durch die 2.Regel die Anzahl der Süßigkeiten um eins reduziert wird. Es gibt aber keine Regel, die die Anzahl der Süßigkeiten erhöht.
              */
             while( _glasInhalt . Count > 2 );
         }
