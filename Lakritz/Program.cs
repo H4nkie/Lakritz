@@ -15,12 +15,15 @@
             // Methode um das Glas mit Random-Süßigkeiten zu befüllen
             FuelleGlas();
 
-            // Nimm zwei Süßigkeiten aus dem Glas, solange das Glas mehr als eine Süßigkeit beinhaltet.
+            // Nimm zwei Süßigkeiten aus dem Glas, solange das Glas mehr als zwei Süßigkeiten beinhaltet.
             do
             {
                 zaehler++;
                 NimmZwei( zaehler );
             }
+            /*
+             *  Sind nur noch 2 Süßigkeiten im Glas, ist es egal, was gezogen wird. Die Anzahl wird immer wieder um um eine Süßigkeit erhöht.
+             */
             while( _glasInhalt . Count > 2 );
         }
         /// <summary>
@@ -83,7 +86,7 @@
             // wurden 2 unterschiedliche Süßigkeiten gezogen, wird die Lakritzschnecke gegessen und das Gummibärchen zurück ins Glas getan
             else
             {
-                _glasInhalt . Add( new Suessigkeit() { Lakritz = true, Gummibaerchen = false } );
+                _glasInhalt . Add( new Suessigkeit() { Lakritz = false, Gummibaerchen = true } );
                 Console . WriteLine( "Die Lakritzschnecke wurde genascht und das Gummibärchen wurde zurück ins Glas getan." );
             }   
             // Ausgabe des verbleibenden Glasinhaltes in Süßigkeiten
