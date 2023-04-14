@@ -26,7 +26,7 @@
              *  vernascht werden und nie wieder aufgefüllt werden. Die Anzahl der Süßigkeiten reduziert sich, 
              *  da durch die 2.Regel und 3.Regel die Anzahl der Süßigkeiten um eins reduziert wird. Es gibt aber keine Regel, die die Anzahl der Süßigkeiten erhöht.
              */
-            while( _glasInhalt . Count > 2 );
+            while( _glasInhalt . Count > 1 );
         }
         /// <summary>
         /// Das Glas wird mit vielen Lakritzschnecken und Gummibärchen gefüllt.
@@ -66,7 +66,7 @@
             Random random = new Random();
 
             // Greife ins Glas und nimm eine zufällige Süßigkeit heraus.
-            int ersteSuessigkeit = random . Next( 1, _glasInhalt . Count - 1);
+            int ersteSuessigkeit = random . Next( 0, _glasInhalt . Count - 1);
             // Gezogene Süßigkeit in string umwandeln für die Ausgabe
             string ersteSussigkeitName = ConvertInhaltToSuessigkeit( _glasInhalt[ ersteSuessigkeit ] );
             Console . Write( $"Gezogen wurde {ersteSussigkeitName} und " );
@@ -74,7 +74,7 @@
             _glasInhalt . RemoveAt( ersteSuessigkeit );
 
             // repeat für zweite Süßigkeit
-            int zweiteSuessigkeit = random . Next( 1, _glasInhalt . Count - 1 );
+            int zweiteSuessigkeit = random . Next( 0, _glasInhalt . Count - 1 );
             string zweiteSuessigkeitName = ConvertInhaltToSuessigkeit( _glasInhalt[ zweiteSuessigkeit ] );
             Console . Write( $" {zweiteSuessigkeitName}." + Environment . NewLine );                      
             _glasInhalt . RemoveAt( zweiteSuessigkeit );
